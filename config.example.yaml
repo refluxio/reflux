@@ -1,0 +1,52 @@
+# Reflux 配置示例
+# 复制为 config.yaml 并修改
+
+port: 8096
+data_dir: ./data
+
+# 管理员账户
+auth:
+  username: admin
+  password: change-me
+
+# 115 网盘扫描目录
+scan:
+  roots:
+    - cid: "你的115目录CID"
+      name: "电影"
+    # 可添加多个目录
+    # - cid: "另一个目录CID"
+    #   name: "电视剧"
+
+# 流媒体配置
+stream:
+  mode: buffer        # buffer（推荐）或 direct
+  buf_size_mb: 256    # 缓冲区大小
+  read_ahead_mb: 128  # 预读距离
+  chunk_size_mb: 32   # 单次请求大小
+  first_chunk_mb: 4   # 首次请求大小（快速起播）
+  max_concurrent_streams: 4
+
+# 分段缓存（节省 CDN 流量）
+segment_cache:
+  enabled: true
+  max_size_gb: 10
+
+# TMDB 元数据匹配
+tmdb:
+  api_key: your-tmdb-api-key
+  language: zh-CN
+
+# License（Pro 功能）
+# license:
+#   key: REFLUX-XXXX-XXXX-XXXX
+
+# WebDAV
+# webdav:
+#   enabled: true
+#   prefix: /dav
+
+# 转码（需要 ffmpeg）
+# transcode:
+#   enabled: true
+#   hw_accel: auto

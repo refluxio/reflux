@@ -1,0 +1,20 @@
+services:
+  reflux:
+    image: ${REFLUX_IMAGE:-ghcr.io/refluxio/reflux:latest}
+    container_name: reflux
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+    volumes:
+      - ./data:/app/data
+      # - ./config.yaml:/app/config.yaml:ro  # 可选：使用配置文件替代环境变量
+    environment:
+      - REFLUX_AUTH_USERNAME=admin
+      - REFLUX_AUTH_PASSWORD=admin123
+      # - REFLUX_SCAN_INTERVAL=30m
+      # - REFLUX_STREAM_MODE=direct
+      - TZ=Asia/Shanghai
+    command: up
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
