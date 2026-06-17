@@ -8,7 +8,7 @@
 
 [English](README.md) | 中文
 
-> 115 网盘 / Google Drive / 本地磁盘流媒体代理 — 通过 Jellyfin / Emby / Infuse / WebDAV 播放云端影视资源
+> 媒体融合网关 — 统一接入 115 网盘、Google Drive、本地磁盘，通过 Jellyfin / Emby / Infuse / WebDAV 串流播放
 
 Reflux 把你的网盘变成私人影视库。文件留在云端，按需串流，无需下载。
 

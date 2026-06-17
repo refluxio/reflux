@@ -8,7 +8,7 @@
 
 English | [中文](README.zh-CN.md)
 
-> 115 Cloud / Google Drive / local disk media proxy — stream cloud media via Jellyfin / Emby / Infuse / WebDAV
+> Media Fusion Gateway — stream from 115 Cloud, Google Drive, or local disk via Jellyfin / Emby / Infuse / WebDAV
 
 Reflux turns your cloud drive into a private media library. Files stay in the cloud, stream on demand, no download needed.
 

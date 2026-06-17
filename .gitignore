@@ -1,3 +1,5 @@
 config.yaml
 data/
 *.dat
+.idea/
+.cloud/
